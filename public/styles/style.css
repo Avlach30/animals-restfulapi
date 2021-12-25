@@ -1,0 +1,37 @@
+body:not(span) { font-family: Verdana, Geneva, Tahoma, sans-serif; }
+.container {
+  margin: 0 50px auto;
+}
+.jsonstr { color: #0B7500; }
+.jsonint { color: #1A01D6; }
+.get-all { 
+  height: 450px;
+  overflow: auto;
+}
+.method { font-weight: bolder; }
+.get {  color: #61AFFE; }
+.post { color: #49CC90; }
+.login-200 {
+  width: 1024;
+  overflow: auto;
+}
+.put { color: #FCA130; }
+.delete { color: #F93E3E; }
+
+@media (max-width: 720px) {
+  .response {
+    width: 360px;
+    overflow: auto;
+  }
+
+  .code {
+    width: 360px;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .response {
+    overflow: auto;
+  }
+}

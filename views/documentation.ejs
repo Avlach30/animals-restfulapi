@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animals REST API Documentation</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Get All Data</h1>
+    <em>Get all data, no authentication required</em>
+    <ul>
+      <li>
+        <p>
+          <b>Endpoint</b>
+        </p>
+        <p>/animals</p>
+      </li>
+      <li>
+        <p>
+          <b>Method</b>
+        </p>
+        <p class="method get">GET</p>
+      </li>
+      <li>
+        <p>
+          <b>Response</b>
+        </p>
+        <div class="response">
+          <pre class="get-all">
+            <span>{</span>
+              <span>
+              <span>  "message": <span class="jsonstr">"Success fetched all animals"</span>,</span>
+              <span>  "animals": <span>[</span>
+                  <span>  {</span>
+                    <span>  "_id": <span class="jsonstr">"61c592dd7652919003a33aa7"</span>,</span>
+                    <span>  "title": <span class="jsonstr">"Harimau"</span>,</span>
+                    <span>  "description": <span class="jsonstr">"Memiliki ciri loreng yang khas berwarna hitam, dan kekuningan"</span>,</span>
+                    <span>  "ordo": <span class="jsonstr">"Karnivora"</span>,</span>
+                    <span>  "creator": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span>,</span>
+                    <span>  "createdAt": <span class="jsonstr">"2021-12-24T09:29:01.086Z"</span>,</span>
+                    <span>  "updatedAt": <span class="jsonstr">"2021-12-24T09:48:57.820Z"</span>,</span>
+                    <span>  "__v": <span class="jsonint">0</span></span>
+                  <span>  },</span>
+                  <span>  {</span>
+                    <span>  "_id": <span class="jsonstr">"61c59b2a7652919003a33aff"</span>,</span>
+                    <span>  "title": <span class="jsonstr">"Beruang"</span>,</span>
+                    <span>  "description": <span class="jsonstr">"Binatang buas yang memiliki bulu tebal"</span>,</span>
+                    <span>  "ordo": <span class="jsonstr">"Karnivora"</span>,</span>
+                    <span>  "creator": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span>,</span>
+                    <span>  "createdAt": <span class="jsonstr">"2021-12-24T10:04:26.119Z"</span>,</span>
+                    <span>  "updatedAt": <span class="jsonstr">"2021-12-24T10:04:26.119Z"</span>,</span>
+                    <span>  "__v": <span class="jsonint">0</span></span>
+                  <span>  },</span>
+                  <span>  {</span>
+                    <span>  "_id": <span class="jsonstr">"61c5b72465329b78127504d7"</span>,</span>
+                    <span>  "title": <span class="jsonstr">"Sapi"</span>,</span>
+                    <span>  "description": <span class="jsonstr">"Hewan yang sering dipelihara sebagai ternak"</span>,</span>
+                    <span>  "ordo": <span class="jsonstr">"Artiodactyla"</span>,</span>
+                    <span>  "creator": <span class="jsonstr">"61c5b69f65329b78127504d0"</span>,</span>
+                    <span>  "createdAt": <span class="jsonstr">"2021-12-24T12:03:48.043Z"</span>,</span>
+                    <span>  "updatedAt": <span class="jsonstr">"2021-12-24T12:05:36.792Z"</span>,</span>
+                    <span>  "__v": <span class="jsonint">0</span></span>
+                  <span>  },</span>
+                  <span>  {</span>
+                    <span>  "_id": <span class="jsonstr">"61c5b7cd65329b78127504e9"</span>,</span>
+                    <span>  "title": <span class="jsonstr">"Jerapah"</span>,</span>
+                    <span>  "description": <span class="jsonstr">"Hewan tertinggi yang hidup di darat, karena lehernya panjang"</span>,</span>
+                    <span>  "ordo": <span class="jsonstr">"Artiodactyla"</span>,</span>
+                    <span>  "creator": <span class="jsonstr">"61c5b69f65329b78127504d0"</span>,</span>
+                    <span>  "createdAt": <span class="jsonstr">"2021-12-24T12:06:37.523Z"</span>,</span>
+                    <span>  "updatedAt": <span class="jsonstr">"2021-12-24T12:06:37.523Z"</span>,</span>
+                    <span>  "__v": <span class="jsonint">0</span></span>
+                  <span>  }</span>
+                <span>],</span> </span>
+              <span>  "totalData": <span class="jsonint">4</span></span>
+              </span>
+            <span>}</span>
+          </pre>
+        </div>
+      </li>
+    </ul>
+
+    <h1>Get Specified Data</h1>
+    <em>Get specified data, no authentication required</em>
+    <ul>
+      <li>
+        <p>
+          <b>Endpoint</b>
+        </p>
+        <p>/animal/:animalId</p>
+      </li>
+      <li>
+        <p>
+          <b>Method</b>
+        </p>
+        <p class="method get">GET</p>
+      </li>
+      <li>
+        <p>
+          <b>Response</b>
+        </p>
+        <div class="response">
+          <pre>
+            <span>{</span>
+              <span> </span>
+              <span>  "message": <span class="jsonstr">"Animal data found successfully"</span>,</span>
+              <span>  "animal": <span>{</span>
+                  <span>  "_id": <span class="jsonstr">"61c592dd7652919003a33aa7"</span>,</span>
+                  <span>  "title": <span class="jsonstr">"Harimau"</span>,</span>
+                  <span>  "description": <span class="jsonstr">"Memiliki ciri loreng yang khas berwarna hitam, dan kekuningan"</span>,</span>
+                  <span>  "ordo": <span class="jsonstr">"Karnivora"</span>,</span>
+                  <span>  "creator": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span>,</span>
+                  <span>  "createdAt": <span class="jsonstr">"2021-12-24T09:29:01.086Z</span>,</span>
+                  <span>  "updatedAt": <span class="jsonstr">"2021-12-24T09:48:57.820Z"</span>,</span>
+                  <span>  "__v": <span class="jsonint">0</span></span>
+                <span>  } </span> </span>
+              <span> </span> 
+            <span>}</span> 
+          </pre>
+        </div>
+      </li>
+    </ul>
+    <h1>Signup</h1>
+    <em>Signup for adding a new user</em>
+    <ul>
+      <li>
+        <p>
+          <b>Endpoint</b>
+        </p>
+        <p>/auth/signup</p>
+      </li>
+      <li>
+        <p>
+          <b>Method</b>
+        </p>
+        <p class="method post">POST</p>
+      </li>
+      <li>
+        <p>
+          <b>Headers</b>
+        </p>
+        <p><pre class="code">Content-Type: application/json</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Body</b>
+        </p>
+        <p>
+          <pre class="code">JSON.stringify({name: String, email: String, password: String})</pre>
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>Response</b>
+        </p>
+        <div class="response">
+          <pre>
+            <span>{</span>
+              <span> </span>
+              <span>  "message": <span class="jsonstr">"User created successfully"</span>,</span>
+              <span>  "userId": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span></span>
+              <span> </span> 
+            <span>}</span> 
+          </pre>
+        </div>
+      </li>
+    </ul>
+    <h1>Login</h1>
+    <em>Login user for manipulate animals data (Required for create, update, and delete some data)</em>
+    <ul>
+      <li>
+        <p>
+          <b>Endpoint</b>
+        </p>
+        <p>/auth/login</p>
+      </li>
+      <li>
+        <p>
+          <b>Method</b>
+        </p>
+        <p class="method post">POST</p>
+      </li>
+      <li>
+        <p>
+          <b>Headers</b>
+        </p>
+        <p><pre class="code">Content-Type: application/json</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Body</b>
+        </p>
+        <p><pre class="code">JSON.stringify({email: String, password: String})</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Response</b>
+        </p>
+        <div class="response">
+          <pre class="login-200">
+            <span>{</span>
+              <span> </span>
+              <span>  "message": <span class="jsonstr">"Login successfully"</span>,</span>
+              <span>  "token": <span class="jsonstr">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE2NDAzOTkyNDQsImV4cCI6MTY3MTkzNTI0NCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG5ueSIsIlN1cm5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6Impyb2NrZXRAZXhhbXBsZS5jb20iLCJSb2xlIjpbIk1hbmFnZXIiLCJQcm9qZWN0IEFkbWluaXN0cmF0b3IiXX0.YPtsIpcmE6VC3hVORiMO9L6e2f6BjI2jN9tmQKIshjADKO47ZcY1fmB6p-fcDYQ_"</span>,</span>
+              <span>  "userId": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span></span>
+              <span> </span> 
+            <span>}</span> 
+          </pre>
+        </div>
+      </li>
+    </ul>
+    <h1>Create data</h1>
+    <em>Create new data (token is obtained from login response)</em>
+    <ul>
+      <li>
+        <p>
+          <b>Endpoint</b>
+        </p>
+        <p>/animal</p>
+      </li>
+      <li>
+        <p>
+          <b>Method</b>
+        </p>
+        <p class="method post">POST</p>
+      </li>
+      <li>
+        <p>
+          <b>Headers</b>
+        </p>
+        <p><pre class="code">Content-Type: application/json</pre></p>
+        <p><pre class="code">Authorization: `Bearer ${token}`</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Body</b>
+        </p>
+        <p><pre class="code">JSON.stringify({title: String, description: String, ordo: String})</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Response</b>
+        </p>
+        <div class="response">
+          <pre>
+            <span>{</span>
+              <span> </span>
+              <span>  "message": <span class="jsonstr">"Created post about animal succsessfully"</span>,</span>
+              <span>  "animal": <span>{</span>
+                <span>  "_id": <span class="jsonstr">"61c592dd7652919003a33aa7"</span>,</span>
+                <span>  "title": <span class="jsonstr">"Harimau"</span>,</span>
+                <span>  "description": <span class="jsonstr">"Memiliki ciri loreng yang khas berwarna hitam, dan kekuningan"</span>,</span>
+                <span>  "ordo": <span class="jsonstr">"Karnivora"</span>,</span>
+                <span>  "creator": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span>,</span>
+                <span>  "createdAt": <span class="jsonstr">"2021-12-24T09:29:01.086Z</span>,</span>
+                <span>  "updatedAt": <span class="jsonstr">"2021-12-24T09:29:01.086Z"</span>,</span>
+                <span>  "__v": <span class="jsonint">0</span></span>
+              <span>  },</span></span></span>
+              <span>  "creator": <span>{</span>
+                <span>  "_id": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span>,</span>
+                <span>  "name": <span class="jsonstr">"john doe"</span></span>
+              <span>  }</span></span></span></span>
+              <span> </span> 
+            <span>}</span> 
+          </pre>
+        </div>
+      </li>
+    </ul>
+    <h1>Update data</h1>
+    <em>Update existing data (token is obtained from login response)</em>
+    <ul>
+      <li>
+        <p>
+          <b>Endpoint</b>
+        </p>
+        <p>/animal/:animalId</p>
+      </li>
+      <li>
+        <p>
+          <b>Method</b>
+        </p>
+        <p class="method put">PUT</p>
+      </li>
+      <li>
+        <p>
+          <b>Headers</b>
+        </p>
+        <p><pre class="code">Content-Type: application/json</pre></p>
+        <p><pre class="code">Authorization: `Bearer ${token}`</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Body</b>
+        </p>
+        <p><pre class="code">JSON.stringify({title: String, description: String, ordo: String})</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Response</b>
+        </p>
+        <div class="response">
+          <pre>
+            <span>{</span>
+              <span> </span>
+              <span>  "message": <span class="jsonstr">"Animal data updated successfully"</span>,</span>
+              <span>  "animal": <span>{</span>
+                <span>  "_id": <span class="jsonstr">"61c592dd7652919003a33aa7"</span>,</span>
+                <span>  "title": <span class="jsonstr">"Harimau"</span>,</span>
+                <span>  "description": <span class="jsonstr">"Hewan buas pemakan daging, terancam punah"</span>,</span>
+                <span>  "ordo": <span class="jsonstr">"Karnivora"</span>,</span>
+                <span>  "creator": <span class="jsonstr">"61c5900009aa371cad7cf42c"</span>,</span>
+                <span>  "createdAt": <span class="jsonstr">"2021-12-24T09:29:01.086Z</span>,</span>
+                <span>  "updatedAt": <span class="jsonstr">"2021-12-24T09:48:57.820Z"</span>,</span>
+                <span>  "__v": <span class="jsonint">0</span></span>
+              <span>  }</span></span></span>
+              <span> </span> 
+            <span>}</span> 
+          </pre>
+        </div>
+      </li>
+    </ul>
+    <h1>Delete data</h1>
+    <em>Delete existing data (token is obtained from login response)</em>
+    <ul>
+      <li>
+        <p>
+          <b>Endpoint</b>
+        </p>
+        <p>/animal/:animalId</p>
+      </li>
+      <li>
+        <p>
+          <b>Method</b>
+        </p>
+        <p class="method delete">DELETE</p>
+      </li>
+      <li>
+        <p>
+          <b>Headers</b>
+        </p>
+        <p><pre class="code">Authorization: `Bearer ${token}`</pre></p>
+      </li>
+      <li>
+        <p>
+          <b>Response</b>
+        </p>
+        <div class="response">
+          <pre>
+            <span>{</span>
+              <span> </span>
+              <span>  "message": <span class="jsonstr">"Animal data deleted successfully"</span>,</span>
+              <span>  "animalId": <span class="jsonstr">"61c592dd7652919003a33aa7"</span>,</span>
+              <span> </span> 
+            <span>}</span> 
+          </pre>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
