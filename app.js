@@ -58,7 +58,7 @@ const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO
 
 mongoose.connect(MONGODB_URI)
   .then(result => {
-    const port = 5000;
+    const port = process.env.PORT || 5000;
     app.listen(port, () => {
       console.log(`Server connected at http://localhost:${port}`);
     });
